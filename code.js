@@ -7,9 +7,10 @@ const calc = new Vue({
         x:0,
         y:0,
         lastResult: 0,
+        random: 0,
     },
     computed: {
-        result: function(){
+        result: function(){ 6
             let x = this.x;
             if(isNotNumber(x)) return this.lastResult;
             x = +this.x;
@@ -19,6 +20,10 @@ const calc = new Vue({
             y = +this.y;
             this.lastResult = x + y;
             return `Результат сложения ${this.lastResult}`
+        }
+    }, methods:{
+        getRandom(){
+            this.random = Math.floor(Math.random() * (this.lastResult));
         }
     }
 

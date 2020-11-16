@@ -12,6 +12,8 @@
         <input type="text" v-model="x">
         <input type="text" v-model="y">
         <div class="result" v-text="result"> </div>
+        <button v-on:click="getRandom">Посмотреть рандомное число из вычисленных</button>
+        <h3> Случайное число {{ random }}</h3>
     </div>
 </body>
 </html>
